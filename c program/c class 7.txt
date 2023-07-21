@@ -1,0 +1,112 @@
+number crunching:-(backward)
+------------------
+
+#include<stdio.h>
+int main()
+{
+    int num,i=0,temp,m=1;
+    printf("enter the number: ");
+    scanf("%d",&num);
+    temp=num;
+    while (temp!=0)
+    {
+        m*=10;
+        temp/=10;
+    }
+    m/=10;
+    int rt;
+    scanf("%d",&rt);
+    while(rt!=0)
+    {
+        int dig=num%10;
+        int rem = num/10;
+        num =(dig*m)+rem;
+        rt--;
+    }
+    printf("%d",num);
+    return 0;
+}
+
+output:-
+--------
+
+enter the number: 12345
+3
+34512
+
+
+forward :-
+---------
+
+#include<stdio.h>
+int main()
+{
+    int num,temp,m=1;
+    printf("enter the number: ");
+    scanf("%d",&num);
+    temp=num;
+    while (temp!=0)
+    {
+        m*=10;
+        temp/=10;
+    }
+    m/=10;
+    int rt;
+    scanf("%d",&rt);
+    while(rt!=0) 
+    {
+        int dig=num%m; 
+        int rem = num/m;
+        num = (dig*10)+rem;
+        rt--;
+    }
+    printf("%d",num);
+    return 0;
+}
+
+output:-
+--------
+
+enter the number: 12345
+3
+45123
+
+armstrong number:-
+----------------
+
+#include<stdio.h>
+int main()
+{
+    int num,temp,count=0,sum =0;
+    printf("enter the number :");
+    scanf("%d",&num);
+    temp=num;
+    while(temp!=0)
+    {
+       count++;
+       temp/=10;
+
+    }
+    temp =num;
+    while (num!=0)
+    {
+        int dig=num%10;
+        int len=count;
+        int m=1;
+        while(len)
+        {
+            m*=dig;
+            len--;
+        }
+        sum+=m;
+
+        num/=10;
+    }
+    printf((sum==temp)?"armstrong":"not armstrong");
+}
+
+output:-
+-------
+
+enter the number :153
+armstrong

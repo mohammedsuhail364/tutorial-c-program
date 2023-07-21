@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int student_age,flag;
+    printf("please enter the age :");
+    scanf("%d",&student_age);
+    if(student_age>=18)
+        flag=1;
+    else
+        flag=0;
+    switch(flag)
+    {
+        case 1:printf("he can able to apply for the voter id");
+        break;
+        case 0: printf("he cannot apply voter id");
+        break;
+    }
+    return 0;
+
+
+}

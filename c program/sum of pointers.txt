@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+    int a=10,*p,*r;
+    p=&a;
+    r=p+1;
+    printf("\nthe size of integer : %d",sizeof (a));
+    printf("\nthe value of p : %d",p);
+    printf("\nthe value of r : %d",r);
+    return 0;
+}

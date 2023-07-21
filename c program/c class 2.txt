@@ -1,0 +1,234 @@
+if statement:-
+--------------
+
+#include <stdio.h>
+int main()
+{
+    if(1)
+    printf("suhail");
+    else
+    printf("no");
+}
+
+output:-
+--------
+    
+suhail
+
+
+another example:-
+-----------------
+
+#include <stdio.h>
+int main()
+{
+    if(2==3)
+    printf("suhail\n");
+    printf("suhailmk");
+    return 0;
+}
+note:in this output comes only second sentence because statement is false ,if statement is true both the sentence print
+
+output:-
+--------
+
+suhailmk
+
+reverse string:-
+----------------
+
+#include <stdio.h>
+#include<math.h>
+#include<string.h>
+int main()
+{
+    int i;
+    char a[20]="apple";
+    int l = strlen(a);
+    printf("the reverse string is:");
+    for(i=l-1;i>=0;i--)
+    {
+        printf("%c",a[i]);
+    }
+}
+
+output:-
+--------
+
+
+note : output is elppa
+
+if else :-
+---------
+#include <stdio.h>
+int main()
+{
+    int a =5,b=10;
+    if(a>b)
+    printf("a is greatest");
+    else 
+    printf("b is greatest");
+    return 0;
+}
+
+output:-
+--------
+
+
+greatest of three numbers using ternary operator:-
+_________________________________________________
+
+#include <stdio.h>
+int main()
+{
+    int a,b,c;
+    scanf("%d %d %d",&a, &b, &c);
+    
+    int max = ((a>b)?a:b)>((b>c)?b:c)?((a>b)?a:b):((b>c)?b:c);
+    printf("%d", ((a>b)?a:b)>((b>c)?b:c)?((a>b)?a:b):((b>c)?b:c));
+    return 0;
+
+}
+
+output:-
+--------
+
+
+easy method to get greatest of three numbers using ternary operator:-
+---------------------------------------------------------------------
+
+#include<stdio.h>
+int main()
+    {
+        int a,b,c;
+        scanf("%d %d %d",&a,&b,&c);
+        int first = (a>b)?a:b;
+        int second = (b>c)?b:c;
+        printf("%d",((first>second)?first:second));
+        
+        return 0;
+        
+    }
+
+output:-
+--------
+
+
+odd or even simple program:-
+---------------------------
+
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    if(a%2==0)
+    printf("it is even");
+    else
+    printf("it is odd");
+}
+
+output:-
+--------
+
+
+using ternary operator:-
+-----------------------
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    printf("%s",(a%2==0)?"even number":"odd number");
+}
+
+output:-
+--------
+
+
+using and operator:-
+-------------------
+#include <stdio.h>
+
+int main()
+{
+    int num1;
+    scanf("%d",&num1);
+    if((num1%2==0 && num1%3==0))
+    {
+        printf("the given number has common divisor of 2 and 3 \n");
+        
+    }
+    else
+    {
+        printf("the given number has not common divisor of 2 and 3");
+    }
+}
+
+output:-
+--------
+
+else if statements:-
+--------------------
+
+#include <stdio.h>
+int main()
+{
+ int num1;
+ scanf("%d",&num1);
+ if(num1%2==0)
+ printf("the given number is divisible by 2");
+ else if(num1%3==0)
+ printf("the given number is divisible by 3");
+ else if(num1%5==0)
+ printf("the given number is divisible by 5");
+ else
+ printf("the given number is not divisible by 2 or 3 or 5");
+}
+
+output:-
+--------
+
+
+another example :-
+--------------------
+
+#include<stdio.h>
+int main()
+{
+    float stud_mark;
+    scanf("%f",&stud_mark);
+    if((int)stud_mark>=90)
+    printf("grade A");
+    else if ((int)stud_mark>=80)
+    printf("grade B");
+    else if((int)stud_mark>=70)
+    printf("grade c");
+    else if((int)stud_mark>=60)
+    printf("grade d");
+    else
+    printf("fail");
+}
+
+output:-
+--------
+
+
+to find given character is vowel or not:-
+-----------------------------------------
+
+#include<stdio.h>
+int main()
+{
+    char a;
+    scanf("%c",&a);
+    if(a=='a'||a=='e'||a=='i'||a=='o'||a=='u')
+    printf("the given character is vowel");
+    else
+    printf("the given character is not a vowel");
+}
+
+output:-
+--------
+
+

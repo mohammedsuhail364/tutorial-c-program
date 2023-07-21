@@ -1,0 +1,14 @@
+
+
+#include<stdio.h>
+int main()
+{
+    float a,b,c;
+    printf("enter the selling price of 20 items: ");
+    scanf("%f",&a);
+    printf("enter the profit :");
+    scanf("%f",&b);
+    c=(a-b)/15;
+    printf("the cost of single item = %0.1f ",c);
+    
+}

@@ -1,0 +1,15 @@
+#include<stdio.h>
+int add(int,int);
+int main()
+{
+    int a,b;
+    printf("the value of a and b :");
+    scanf("%d %d",&a,&b);
+    int ab =add(a,b);
+    printf("the value of ab : %d",ab);
+}
+int add(int x,int y)
+{
+
+    return x+y;
+}

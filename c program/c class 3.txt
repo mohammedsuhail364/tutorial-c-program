@@ -1,0 +1,33 @@
+switch case:
+-------------
+#include <stdio.h>
+int main()
+{
+    int a;
+    printf("enter the number :");
+    scanf("%d",&a);
+    switch(a)
+    {
+        case 0: printf("\n the selected number is 0 ");
+        case 1: printf("\n the selected number is 1 ");
+    }
+}
+another example:
+-----------------
+
+#include<stdio.h>
+int main()
+{
+    char a;
+    scanf("%c",&a);
+    switch(a)
+    {
+
+        case 'a':printf("the selected number is a \n");
+        int x=0;
+        printf("%d",++x);
+        break;
+        case 'b' :printf("the selected number is b \n");
+        break;
+    }
+}

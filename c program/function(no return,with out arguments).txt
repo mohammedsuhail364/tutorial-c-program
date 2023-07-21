@@ -1,0 +1,17 @@
+#include <stdio.h>
+//function declaration
+void add(int a,int b);
+int main()
+{
+    //fuction calling
+    add(34,43);
+
+}
+void add(int a,int b)
+{
+
+int c;
+   c=a+b;
+    printf("\n total value is : %d",c);
+
+}

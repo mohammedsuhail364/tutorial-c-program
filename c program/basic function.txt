@@ -1,0 +1,24 @@
+#include<stdio.h>
+void add()
+{
+
+    int a,b,c;
+    printf("\n enter the value : ");
+    scanf("%d",&a);
+    printf("\n enter the value : ");
+    scanf("%d",&b);
+   c = a+b;
+   printf("\n total value : %d ",c);
+}
+int main()
+{
+  int i,n;
+  printf("\n enter the limit :");
+  scanf("%d",&n);
+  for(i=0;i<n;i++)
+  {
+      add();
+  }
+  return 0;
+
+}

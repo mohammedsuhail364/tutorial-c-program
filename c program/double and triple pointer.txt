@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+
+int main()
+{
+   int a =10,*p;
+   int **q;
+   int ***r;
+   p=&a;
+   printf("the value of a : %d",a);
+   printf("\nthe value of &a  : %d",&a);
+   printf("\nthe value of p : %d",p);
+   printf("\nthe value of &p : %d",&p);
+   printf("\ndereferencing of p : %d",*p);
+   printf("\n--------------------------");
+
+    q=&p;
+   printf("\nthe value of p : %d",p);
+   printf("\nthe value of &p  : %d",&p);
+   printf("\nthe value of q : %d",q);
+   printf("\nthe value of &q : %d",&q);
+   printf("\ndereferencing of q : %d",**q);
+   printf("\n--------------------------");
+    r=&q;
+   printf("\nthe value of q : %d",q);
+   printf("\nthe value of &q  : %d",&q);
+   printf("\nthe value of r : %d",r);
+   printf("\nthe value of &r : %d",&r);
+   printf("\ndereferencing of r : %d",**r);
+   printf("\n--------------------------");
+    return 0;
+
+}

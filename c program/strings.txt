@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+
+    char a[100];
+    gets(a);
+    char b[]="nanba";
+
+    printf("\n length of a is : %d",strlen(a));
+    printf("\n compare of a and b : %d",strcmp(a,b));
+    printf("\n upper case of a is : %s",strupr(a));
+    printf("\n lower case of a is : %s",strlwr(a));
+    strcat(a,b);
+    printf("\n concatenation of a is :%s",a);
+    printf("\n reverse of a is : %s",strrev(a));
+}

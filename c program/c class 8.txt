@@ -1,0 +1,284 @@
+array:-
+---------
+
+#include<stdio.h>
+int main()
+{
+    int num,i,j=0;
+   scanf("%d",&num);
+    int arr[num];
+    for(i=0;i<num;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<num;i++)
+    {
+        printf("%d\n",arr[i]);
+    }
+}
+
+output:-
+--------
+
+5
+1 1 2 3 4
+1
+1
+2
+3
+4
+
+another example :-
+----------------
+#include<stdio.h>
+int main()
+{
+    int num,i,j=0,sum=0;
+   scanf("%d",&num);
+    int arr[num];
+    for(i=0;i<num;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<num;i++)
+    {
+        sum+=arr[i];
+    }
+    printf("%d",sum);
+}
+
+output:-
+--------
+
+5
+1 2 3 4 5
+15
+
+array crunching:-
+----------------
+#include<stdio.h>
+int main()
+{
+    int num,i,j;
+    scanf("%d",&num);
+    int arr[num];
+    for(i=0;i<num;i++)
+       scanf("%d",&arr[i]);
+    int temp,rt;
+    printf("please enter the value of rotation :");
+    scanf("%d",&rt);
+    for(i=0;i<rt;i++)
+    {
+        temp=arr[0];
+        for(j=0;j<num-1;j++)
+        {
+            arr[j]=arr[j+1];
+        }
+        arr[num-1]=temp;
+    }
+    for(i=0;i<num;i++)
+    printf("%d ",arr[i]);
+}
+
+output:-
+----------
+
+5
+1 2 3 4 5
+please enter the value of rotation :3
+4 5 1 2 3
+
+forward:-
+--------
+
+#include<stdio.h>
+int main()
+{
+    int num,i,j;
+    scanf("%d",&num);
+    int arr[num];
+    for(i=0;i<num;i++)
+       scanf("%d",&arr[i]);
+    int temp,rt;
+    printf("please enter the value of rotation :");
+    scanf("%d",&rt);
+    for(i=0;i<rt;i++)
+    {
+        temp=arr[num-1];
+        for(j=num-1;j>0;j--)
+        {
+            arr[j]=arr[j-1];
+           
+        }
+        arr[0]=temp;
+    }
+    for(i=0;i<num;i++)
+    printf("%d ",arr[i]);
+}
+
+output:-
+--------
+
+5
+1 2 3 4 5
+please enter the value of rotation :1
+5 1 2 3 4
+
+sorting array ascending:-
+-----------------------
+
+#include<stdio.h>
+int main()
+{
+    int num,i,j;
+    scanf("%d",&num);
+    int arr[num];
+    for(i=0;i<num;i++)
+        scanf("%d",&arr[i]);
+    for(i=0;i<num-1;i++)
+    {
+       int temp=0;
+       for(j=i+1;j<num;j++)
+       {
+           if(arr[i]>arr[j])
+           {
+               temp=arr[i];
+               arr[i]=arr[j];
+               arr[j]=temp;
+           }
+       }
+    }
+    for(i=0;i<num;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+}
+
+output:-
+---------
+
+5
+12 22 10 7 26
+7 10 12 22 26
+
+
+sorting array descending:-
+-----------------------
+
+#include<stdio.h>
+int main()
+{
+    int num,i,j;
+    scanf("%d",&num);
+    int arr[num];
+    for(i=0;i<num;i++)
+        scanf("%d",&arr[i]);
+    for(i=0;i<num-1;i++)
+    {
+       int temp=0;
+       for(j=i+1;j<num;j++)
+       {
+           if(arr[i]<arr[j])
+           {
+               temp=arr[i];
+               arr[i]=arr[j];
+               arr[j]=temp;
+           }
+       }
+    }
+    for(i=0;i<num;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+}
+
+output:-
+--------
+
+5
+43
+32
+44
+21
+22
+44 43 32 22 21
+
+to find duplicate in array:-
+----------------------------
+
+#include<stdio.h>
+int main()
+{
+    int num,i,j;
+    scanf("%d",&num);
+     int arr[num];
+    for(i=0;i<num;i++)
+       scanf("%d",&arr[i]);
+    for(i=0;i<num-1;i++)
+    {
+        if(arr[i]!=-1)
+            for(j=i+1;j<num;j++)
+        {
+            if(arr[i]==arr[j] && arr[j]!=-1)
+                arr[j]=-1;
+        }
+    }
+    for(i=0;i<num;i++)
+        if(arr[i]!=-1)
+        printf("%d",arr[i]);
+
+
+}
+
+output:-
+-------
+
+5
+1 1 2 2 3
+123
+
+to find how many dupilcates are there :-
+----------------------------------------
+
+#include<stdio.h>
+int main()
+{
+    int num,i,j;
+    scanf("%d",&num);
+     int arr[num];
+    for(i=0;i<num;i++)
+       scanf("%d",&arr[i]);
+    for(i=0;i<num;i++)
+    {
+        int count =1;
+        if(arr[i]!=-1){
+            for(j=i+1;j<num;j++)
+        {
+
+            if(arr[i]==arr[j] && arr[j]!=-1)
+              {
+                 arr[j]=-1;
+                 count++;
+              }
+
+        }
+          printf("%d----->%d\n",arr[i],count);}
+    }
+
+
+}
+
+output:-
+---------
+
+5
+1 1 1 2 3
+1----->3
+2----->1
+3----->1
+
+
+
+
+
+

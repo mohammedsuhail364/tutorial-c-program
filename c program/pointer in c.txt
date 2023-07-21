@@ -1,0 +1,22 @@
+pointer in c:-
+--------------
+#include<stdio.h>
+int main()
+{
+    int *a;
+    
+    int d=5;
+    a =&d;
+     
+     printf("%d\n",a);
+     printf("%d",*a);
+     return 0;
+}
+note:&d - memory space in computer so it is saved in "a",but *a is the value of d so indicates *a also int .
+*a is pointer
+
+output:-
+--------
+
+6422036
+5

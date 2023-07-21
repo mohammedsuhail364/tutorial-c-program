@@ -1,0 +1,57 @@
+strings:-
+----------
+
+#include <stdio.h>
+#include<string.h>
+void main()
+{
+    char str[10];
+    int len;
+    scanf("%s",&str);
+    len=strlen(str);
+printf("%d",len);
+}
+
+
+output:-
+-------
+
+suhail
+6
+
+another example:-
+-----------------
+
+#include <stdio.h>
+#include<string.h>
+void main()
+{
+   char arr1[6]={'a','b','c','d','e'};
+   char arr2[10]={'f','g','h'};
+   strcpy(arr2,arr1);
+   printf("%s",arr2);
+}
+
+output:-
+---------
+
+abcde
+
+concatenation:-
+-------------
+
+#include <stdio.h>
+#include<string.h>
+void main()
+{
+   char arr1[7]="suhail";
+   char arr2[10]=" star";
+   strcat(arr1,arr2);
+   printf("%s",arr1);
+}
+
+
+output:-
+-------
+
+suhail star

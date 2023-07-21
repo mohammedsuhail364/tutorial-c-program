@@ -1,0 +1,135 @@
+sum and average in c:
+_____________________
+
+#include <stdio.h>
+int main()
+{
+    int num1,num2;
+    scanf("%d %d",&num1,&num2);
+float sum = num1+num2;
+    printf("sum of two integers %0.1f \n",sum);
+ 
+    printf("the average of two numbers are %f",sum/2);
+    return 0;
+    
+}
+
+output:-
+--------
+
+10 10
+sum of two integers 20.0
+the average of two numbers are 10.000000
+
+ternary operator:
+_________________
+
+#include <stdio.h>
+int main()
+{
+    int num1,num2;
+    scanf("%d %d",&num1,&num2);
+    printf("the maximum number is :%d",(num1>num2)?num1:num2);
+return 0;
+}
+
+output:-
+-------
+
+10
+20
+the maximum number is :20
+
+
+logical "AND" operator:
+_______________________
+
+
+#include<stdio.h>
+int main()
+{
+    int num1,num2;
+    printf("%d\n",(0 && 0));
+    printf("%d\n",(0 && 1));
+    printf("%d\n",(1 && 1));
+    printf("%d\n",(1 && 0));
+    return 0;
+}
+
+output:-
+-------
+
+0
+0
+1
+0
+
+
+logical "OR" operator:
+______________________
+
+#include<stdio.h>
+int main()
+{
+    int num1,num2;
+    printf("%d\n",(0 || 0));
+    printf("%d\n",(0 || 1));
+    printf("%d\n",(1 || 1));
+    printf("%d\n",(1 || 0));
+    return 0;
+}
+
+output:-
+-------
+
+0
+1
+1
+1
+
+another example :-
+_________________
+
+#include <stdio.h>
+int main() 
+{
+    int num1=6,num2=12;
+    int a =(num1>num2)?0:1;
+    int b =(num1<num2)?0:1;
+    printf("%d\n",(0 || 0));
+    printf("%d\n",(a || b));
+    printf("%d\n",(1 || 1));
+    printf("%d\n",(1 || 0));
+    return 0;
+    
+}
+ output:-
+___________
+
+0
+1
+1
+1
+
+statement :
+__________
+
+#include<stdio.h>
+int main()
+{
+    int num1=6,num2=12;
+    int a = (num1,num2)?0:1;
+    int b = (num1,num2)?0:1;
+    printf("%s\n",(num1<num2)?" a is great":"b is great");
+    char ar[100];
+    scanf("%[^\n]s",ar);
+    printf("%s",ar);
+    return 0;
+}
+
+output:-
+-------
+ a is great
+suhail
+suhail
+

@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int i,n;
+    scanf("%d",&n);
+    printf("number of terms %d\n",n);
+    int t1=0,t2=1;
+    int next_term = t1+t2;
+    printf("fibanocci series of   %d %d ",t1,t2);
+    for(i=3;i<=n;i++)
+    {
+        printf(" %d ",next_term);
+        
+    
+    t1=t2;
+    t2=next_term;
+    next_term=t1+t2;
+    }
+}
+
+output:-
+-------
+
+10
+number of terms 10
+fibanocci series of   0 1  1  2  3  5  8  13  21  34

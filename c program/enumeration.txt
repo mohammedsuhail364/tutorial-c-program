@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+int main()
+{
+    enum num{no = 10,yes=20};
+    enum num a;
+   a= yes;
+   printf("\n%d",a);
+   enum d{x=20,y};
+   enum d s;
+   s=y;
+   printf("\n%d",s);
+}

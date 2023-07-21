@@ -1,0 +1,501 @@
+patterns using for loop:-
+------------------------
+
+#include <stdio.h>
+int main()
+{
+    int i,j,n;
+scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("%d%d ",i,j);
+
+        }
+         printf("\n");
+    }
+}
+
+output:-
+-------
+
+5
+00 01 02 03 04
+10 11 12 13 14
+20 21 22 23 24
+30 31 32 33 34
+40 41 42 43 44
+
+star pattern:-
+-------------
+#include <stdio.h>
+int main()
+{
+    int i,j,n;
+scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("*");        }
+         printf("\n");
+    }
+}
+
+output:-
+-------
+
+5
+*****
+*****
+*****
+*****
+*****
+
+another example:-
+----------------
+
+#include <stdio.h>
+int main()
+{
+    int i,j,n;
+scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        if(i==0||j==0||i==n-1||j==n-1)
+            printf("*");
+            else
+                printf(" ");
+                printf("\n");
+                  }
+return 0;
+}
+
+output:-
+--------
+
+5
+*****
+*   *
+*   *
+*   *
+*****
+
+another example :-
+-----------------
+
+#include <stdio.h>
+int main()
+{
+    int i,j,n;
+scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        if(i==0||j==0||i==n-1||j==n-1||i==j)
+            printf("*");
+            else
+                printf(" ");
+                printf("\n");
+                  }
+return 0;
+}
+
+outpur:-
+---------
+
+5
+*****
+**  *
+* * *
+*  **
+*****
+
+
+star inverted triangle:-
+-----------------------
+#include <stdio.h>
+int main()
+{
+    int i,j,n;
+scanf("%d",&n);
+    for(i=0;i<=n;i++)// i=0 n=5
+    {
+        for(j=0;j<=n-i;j++)
+        {
+            printf("*");
+                 }
+  printf("\n");
+    }
+
+
+}
+
+output:-
+-------
+
+enter the number :5
+*****
+****
+***
+**
+*
+
+star pyramid :-
+--------------
+
+#include<stdio.h>
+int main()
+{
+    int i,j,k,n,m;
+    printf("enter the number :");
+    scanf("%d",&n);
+    m=n;
+    for (i=0;i<n;i++)
+    {
+        for(j=0;j<m-1;j++)
+        {
+            printf(" ");
+        }
+        for(k=0;k<i+1;k++)
+            {
+                printf("* ");
+
+            }
+m--;
+                 printf("\n");
+    }
+}
+
+output:-
+-------
+
+enter the number :5
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
+
+inverted pyramid:-
+-----------------
+
+#include<stdio.h>
+int main()
+{
+    int i,j,k,n,m;
+    printf("enter the number :");
+    scanf("%d",&n);
+    m=1;
+    for (i=n;i>=0;i--)
+    {
+        for(j=0;j<m;j++)
+        {
+            printf(" ");
+        }
+        for(k=0;k<i+1;k++)
+            {
+                printf("* ");
+
+            }
+m++;
+                 printf("\n");
+    }
+}
+
+output:-
+--------
+
+enter the number :5
+ * * * * * *
+  * * * * *
+   * * * *
+    * * *
+     * *
+      *
+
+
+using numbers :-
+---------------
+#include<stdio.h>
+int main()
+{
+    int i,j,k,n,m;
+    printf("enter the number :");
+    scanf("%d",&n);
+int temp = n;
+    for (i=0;i<=n;i++)
+    {
+        for(j=0;j<i;j++)
+        {
+            printf(" ");
+        }
+        for(k=0;k<n-i;k++)
+            {
+                printf("%d ",temp);
+
+            }
+temp--;
+                 printf("\n");
+    }
+}
+
+output:-
+---------
+
+enter the number :5
+5 5 5 5 5
+ 4 4 4 4
+  3 3 3
+   2 2
+    1
+
+another example :-
+-----------------
+
+#include<stdio.h>
+int main()
+{
+    int i,j,k,n,m;
+    printf("enter the number :");
+    scanf("%d",&n);
+int temp = n;
+    for (i=0;i<=n;i++)
+    {
+        temp =1;
+        for(j=0;j<i;j++)
+        {
+            printf(" ");
+        }
+        for(k=0;k<n-i;k++)
+            {
+                printf("%d ",temp++);
+
+            }
+
+                 printf("\n");
+    }
+}
+
+output:-
+---------
+
+enter the number :5
+1 2 3 4 5
+ 1 2 3 4
+  1 2 3
+   1 2
+    1
+
+using alphabets:-
+-----------------
+
+#include<stdio.h>
+int main()
+{
+    int i,j,k,n,m;
+    printf("enter the number :");
+    scanf("%d",&n);
+int temp = n;
+    for (i=0;i<=n;i++)
+    {
+        temp =1;
+        for(j=0;j<i;j++)
+        {
+            printf(" ");
+        }
+        for(k=0;k<n-i;k++)
+            {
+                printf("%c ",(temp++)+64);
+
+            }
+
+                 printf("\n");
+    }
+}
+
+output:-
+--------
+enter the number :5
+A B C D E
+ A B C D
+  A B C
+   A B
+    A
+
+another example:-
+-----------------
+
+#include<stdio.h>
+int main()
+{
+    int i,j,k,n;
+    scanf("%d",&n);
+    int temp=n;
+    for(i=0;i<n;i++)
+    {
+        temp=1;
+        for(j=0;j<i;j++)
+        {
+            printf(" ");
+        }
+        for(k=0;k<n-i;k++)
+        {
+            printf("%c ",(temp++)+64);
+        }
+
+        printf("\n");
+    }
+    for(i=0;i<n;i++)
+    {
+        temp=1;
+        for(j=0;j<n-(1+i);j++)
+        {
+            printf(" ");
+        }
+        for(k=0;k<i+1;k++)
+        {
+            printf("%c ",(temp++)+64);
+        }
+        printf("\n");
+    }
+}
+
+output:-
+--------
+
+5
+A B C D E
+ A B C D
+  A B C
+   A B
+    A
+    A
+   A B
+  A B C
+ A B C D
+A B C D E
+
+another example :-
+-----------------
+
+#include<stdio.h>
+int main()
+{
+  int num,i=0,j=0,sp=0,temp;
+  scanf("%d",&num);
+  printf("\n\n");
+  temp=num;
+  for(i=0;i<num;i++)
+  {
+      temp=1;
+      for(sp=0;sp<i;sp++)
+        printf(" ");
+      for(j=0;j<num-i;j++)
+        printf("%c ",(temp++)+64);
+      temp=1;
+      for(sp=0;sp<num;sp++)
+        printf(" ");
+      for(j=0;j<i+1;j++)
+        printf("%c ",(temp++)+64);
+      printf("\n");
+      printf("\n");
+  }
+  return 0;
+}
+
+output:-
+--------
+
+5
+
+
+A B C D E      A
+
+ A B C D      A B
+
+  A B C      A B C
+
+   A B      A B C D
+
+    A      A B C D E
+
+another example:-
+----------------
+
+#include<stdio.h>
+int main()
+{
+    int i,j,sp=0,temp,num;
+    printf("enter the number :");
+    scanf("%d",&num);
+    printf("\n\n");
+    temp=num;
+    for(i=0;i<num;i++)
+    {
+        temp=1;
+        for(sp=0;sp<num-i;sp++)
+        {
+            printf(" ");
+        }
+        for(j=0;j<i+1;j++)
+        {
+            printf("%c ",(temp++)+64);
+
+        }
+        temp=1;
+       for(sp=0;sp<((num*2)-(i*2))-2;sp++)
+       {
+           printf(" ");
+
+       }
+       for (j=0;j<i+1;j++)
+       {
+         printf("%c ",(temp++)+64);
+       }
+       printf("\n");
+    }
+    for(i=0;i<num*2;i++)
+    {
+        temp=1;
+        for(sp=0;sp<i;sp++)
+        {
+            printf(" ");
+        }
+        for(j=0;j<num*2-i;j++)
+        {
+            printf("%c ",(temp++)+64);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+output:-
+----------
+
+enter the number :5
+
+
+     A         A
+    A B       A B
+   A B C     A B C
+  A B C D   A B C D
+ A B C D E A B C D E
+A B C D E F G H I J
+ A B C D E F G H I
+  A B C D E F G H
+   A B C D E F G
+    A B C D E F
+     A B C D E
+      A B C D
+       A B C
+        A B
+         A
+
+
+
+
+

@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+
+int main()
+{
+   int a =10,*p;
+   p=&a;
+   printf("the value of a : %d",a);
+   printf("\nthe value of &a  : %d",&a);
+   printf("\nthe value of p : %d",p);
+   printf("\nthe value of &p : %d",&p);
+
+    return 0;
+}

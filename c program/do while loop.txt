@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i=0,n;
+    printf("\n enter the limit :");
+    scanf("%d",&n);
+    do
+    {
+        printf("\n%d",i);
+        i+=2;
+    }
+    while(i<=n);
+    return 0;
+}
+
+note :
+1-initialization;
+2-increment or decrement
+3-condition checking.

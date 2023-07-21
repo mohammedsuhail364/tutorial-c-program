@@ -1,0 +1,287 @@
+pointers :-
+----------
+
+#include<stdio.h>
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    printf("%d %p",num,&num);
+}
+
+output:-
+--------
+
+10
+10 000000000061FE1C
+
+another example:-
+----------------
+
+#include<stdio.h>
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    int *ptr=&num;
+    num=1152;
+    printf("%d",*ptr);
+    return 0;
+}
+
+output:-
+-------
+
+10
+1152
+
+another example:-
+----------------
+
+#include<stdio.h>
+int main()
+{
+    int num;
+    scanf("%d",&num);
+   printf("%d\n%p\n",num,&num);
+   int *ptr=&num;
+   num=1152;
+    printf("%p\n",ptr);
+    printf("%d",*ptr);
+    return 0;
+}
+
+output:-
+--------
+
+10
+10
+000000000061FE14
+000000000061FE14
+1152
+
+sum of pointer variables:-
+-------------------------
+
+#include<stdio.h>
+int main()
+{
+    int num1,num2;
+    scanf("%d %d",&num1,&num2);
+    int *ptr1=&num1;
+    int *ptr2=&num2;
+    printf("total value is :%d",(*ptr1 + *ptr2));
+    return 0;
+}
+
+output:-
+---------
+
+10
+20
+total value is :30
+
+functions:-
+-----------
+
+#include<stdio.h>
+void solve()
+{
+    int num;
+    scanf("%d",&num);
+    printf("%d",num);
+}
+int main()
+{
+    solve();
+}
+
+output:-
+---------
+
+10
+10
+
+no return type with arguments:-
+-----------------------------
+
+#include<stdio.h>
+void solve(int n)
+{
+    printf("%d\n",n);
+}
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    solve(num);
+}
+
+output:-
+-------
+
+10
+10
+
+return type without arguments:-
+------------------------------
+
+#include<stdio.h>
+int solve(int n)
+{
+    return n*n;
+}
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    int square=solve(num);
+    printf("%d",square);
+}
+
+output:-
+-------
+
+10
+100
+
+another example:-
+------------------
+
+#include<stdio.h>
+int solve(int n)
+{
+    return n*n;
+}
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    for(int i=1;i<=num;i++)
+    {
+        int square=solve(i);
+        printf("square of %d: %d\n",i,square);
+    }
+}
+
+output:-
+--------
+
+10
+square of 1: 1
+square of 2: 4
+square of 3: 9
+square of 4: 16
+square of 5: 25
+square of 6: 36
+square of 7: 49
+square of 8: 64
+square of 9: 81
+square of 10: 100
+
+another example:-
+----------------
+
+#include<stdio.h>
+int main()
+{
+    int arr[]={1,2,3,4};
+    for(int i=0;i<4;i++){
+        printf("%d ",*(arr+i));
+    printf("%p\n",(arr+i));}
+}
+
+
+output:-
+-------
+
+1 000000000061FE00
+2 000000000061FE04
+3 000000000061FE08
+4 000000000061FE0C
+
+using functions to find prime numbers:-
+--------------------------------------
+
+#include<stdio.h>
+char findprime(int n)
+{
+    int f1=0,i;
+    for(i=2;i<n;i++)
+
+        if(n%i==0)
+            return'n';
+        return'p';
+    }
+int main()
+{
+int num,i,sum=0;
+scanf("%d",&num);
+for(int i=1;i<=num;i++)
+    {
+        char ch=findprime(i);
+        switch(ch)
+        {
+            case'p':printf("%d is prime number\n",i);
+            break;
+                default:printf("%d is not a prime number\n",i);
+            break;
+        }
+    }
+}
+
+
+output:-
+--------
+
+10
+1 is prime number
+2 is prime number
+3 is prime number
+4 is not a prime number
+5 is prime number
+6 is not a prime number
+7 is prime number
+8 is not a prime number
+9 is not a prime number
+10 is not a prime number
+
+to find factorial using fuctions:-
+---------------------------------
+
+#include<stdio.h>
+int findfactorial(int n)
+{
+    int fact=1;
+    if(n!=0)
+    {
+        printf("%d\n",n);
+        fact=n*findfactorial(n-1);
+        return fact;
+        
+        
+    }
+    else
+        return fact;
+}
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    int fact=findfactorial(num);
+    printf("the factorial of the given number :%d",fact);
+}
+
+
+output:-
+--------
+
+5
+5
+4
+3
+2
+1
+the factorial of the given number :120
+
+

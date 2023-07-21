@@ -1,0 +1,18 @@
+find the total number of currency notes of each domination the 
+cashier will have to give to the withdrawer
+
+solution:-
+-------------
+
+#include<stdio.h>
+int main()
+{
+    int amt;
+    printf("enter the amount of withdraw :");
+    scanf("%d",&amt);
+    printf("\n required notes of 100 :%d" ,amt/100);
+    printf("\n required notes of 50 : %d",(amt%100)/50);
+    printf("\n required notes of 10 : %d",((amt%100)%50)/10);
+    printf("\n amount still remaining : %d",((amt%100)%50)%10);
+    
+}

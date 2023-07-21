@@ -1,0 +1,16 @@
+#include <stdio.h>
+void add();//function declaration
+int main()
+{
+   add();
+}
+void add()
+{
+    int a,b,c;
+    printf("the value of a and b : ");
+    scanf("%d %d",&a,&b);
+    c=a+b;
+    printf("the value of c : %d ",c);
+}
+
+note :no return means we use void before the function

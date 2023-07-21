@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include<math.h>
+#include<string.h>
+int main()
+{
+    int a,b,c,d,e;
+    printf("\nenter the 4 digit number: ");
+    scanf("%d",&a);//1234
+    b=a/10;//123
+    c=a%10;//4
+    d=b/100;//1
+    e=c+d;
+    printf("sum of digits:%d",e);
+}
+
+output:-
+-------
+enter the 4 digit number: 1234
+sum of digits:5

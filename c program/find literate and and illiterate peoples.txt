@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    float pop,totalmen,totalwoman,litmen,litwoman,totliterate,totilliterate;
+    printf("Enter the total population");
+    scanf("%f",&pop);
+    printf("The total population :%0.1f\n",pop);
+    
+    totalmen = pop*((float)52/(float)100);
+    totalwoman =pop - totalmen;
+    litmen = pop*((float)35/(float)100);
+    totliterate = pop*((float)52/(float)100);
+    litwoman = totliterate - litmen;
+    totilliterate = pop -(litwoman+litmen);
+    
+    
+    printf("The totalmen :%0.1f\n",totalmen);
+    printf("The total women :%0.1f\n",totalwoman);
+    printf("literate men :%0.1f\n",litmen);
+    printf("total literate :%0.1f\n",totliterate);
+    printf("Total literate women :%0.1f\n",litwoman);
+    printf(" total illiterate :%0.1f",totilliterate);
+    return 0;
+
+}

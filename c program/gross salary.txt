@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+float a,b,c,d;
+    printf("enter the basic salary ");
+    scanf("%f",&a);
+   
+   b = a*((float)40/(float)100);
+   c = a*((float)20/(float)100);
+   
+   d=a+b+c;
+   
+    
+    printf("the gross salary %0.1f",d);
+    
+}

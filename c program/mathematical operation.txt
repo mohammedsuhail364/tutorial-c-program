@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main()
+{
+    printf("\n square root : %0.2f",sqrt(4));
+    printf("\n power : %0.2f",pow(2,3));
+    printf("\n float value : %0.2f",ceil(9.8));
+    printf("\n float value : %0.2f",ceil(9.2));
+    printf("\n float value : %0.2f",floor(9.8));
+    printf("\n float value : %0.2f",floor(9.2));
+    printf("\n round off value : %0.2f",round(9.8));
+    printf("\n round off value : %0.2f",round(9.8));
+}

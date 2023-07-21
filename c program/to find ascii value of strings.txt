@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+    char a;
+    scanf("%c",&a);
+    printf("ascii value is : %c = %d",a , a);
+
+}
+
+output:-
+--------
+
+e
+ascii value is : e = 101
