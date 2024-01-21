@@ -1,0 +1,121 @@
+1)check if a given string is binary string or not give a string 'str',the task is to check whether it is binary string or not
+
+program:
+--------
+
+a=input()
+n=set(a)
+print(n)
+count=0
+for x in n:
+    if x=="1" or x=="0":
+        count+=1
+    else:
+       count=0
+       break
+if count>=1:
+    print("yes")
+else :
+    print("no")
+
+
+output:-
+-------
+
+101010
+yes
+
+2)to print between the substring
+
+program:-
+------
+
+a=input()
+b=input()
+c=input()
+m=a.split()
+print(' '.join(m[m.index(b)+1:m.index(c)]))
+
+output:-
+--------
+
+gif is best for geeks and cs
+is
+and
+best for geeks
+
+3)if the given string length is less than 3 then print same and length is greater than 3 then add "ing" in the end and also check if the given string is end with "ing" then add "ly" in the end.
+
+program:-
+--------
+
+n=input()
+if len(n)<3:
+    n=n
+elif len(n)>3:
+    if n.endswith('ing'):
+        n+="ly"
+    else:
+        n+="ing"
+print(n)
+
+output:-
+--------
+
+string
+stringly
+
+4)In the given string take the last two elements and multiply 4 times and print.
+
+program:-
+---------          
+n=input()
+s=n[-2:]
+print(s)
+if 2<len(n):
+    print(s*4)
+
+output:-
+-------
+suhail
+il
+ilililil
+
+5)to take the numbers only in the given string and add the numbers print the total values
+
+program:-
+---------
+
+n=input()
+sum1=0
+for x in n:
+    if x in "0123456789":
+        sum1+=int(x)
+print(sum1)
+
+output:-
+--------
+
+suhail364
+13
+
+6)longest common prefix:-
+------------------------
+n=list(map(str,input().split()))
+print(n)
+longprefix=n[0]
+
+for x in n[1:]:
+    i=0
+    while i<len(longprefix) and i<len(x) and longprefix[i] == x[i]:
+        i+=1
+    longprefix=longprefix[:i]
+print(longprefix)
+   
+output:-
+---------
+
+geeksforgeeks geeks geek geers
+['geeksforgeeks', 'geeks', 'geek', 'geers']
+gee
+

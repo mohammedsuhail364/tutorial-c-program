@@ -1,0 +1,107 @@
+1)program:-
+-------------
+lst=["geeksforgeeks is best for geeks"]
+lst1=['e','b','g','f']
+dic ={}
+lss=lst[0]
+
+for i in lst1:
+    count=0
+    for j in range(0,len(lss)):
+    
+        if i == lss[j]:
+            count+=1
+    dic[i]=count
+print(dic)
+    
+
+output:-
+-------
+{'e': 7, 'b': 1, 'g': 3, 'f': 2}
+
+2)to find symmetrical or non symmetrical and palindrome or not a palindrome:-
+-----------------------------------------------------------------------------
+
+input_str = input()
+a=len(input_str)//2
+print(input_str[::-1])
+ 
+if (input_str[:a]==input_str[a:]):
+    print("The entered string is symmetrical")
+else:
+    print("The entered string is not symmetrical")
+      
+if input_str == input_str[::-1]:
+    print("the entered string is palindrome")
+else:
+    print("the entered string is not a palindrome")
+
+output:-
+---------
+
+malayalam
+The entered string is not symmetrical
+the entered string is palindrome
+
+3)to reverse the given string:-
+--------------------------------
+
+str="python is a proogramming language"
+a=str.split()[::-1]
+for i in a:
+    print(i,end=" ")
+
+output:-
+--------
+language proogramming a is python 
+
+4)count the characters without space:-
+------------------------------------
+
+n="python is a programming language"
+count=0
+li=[]
+for i in n:
+    li.append(i)
+for i in li:
+    if i==" ":
+        pass
+    else:
+        count+=1
+print(count)
+
+output:-
+--------
+
+29
+
+6)given a list the task to sort first half in ascending and second half in decending.
+
+program:-
+--------
+
+a=list(map(int,input().split()))
+b=len(a)
+li=[]
+for i in range(b):
+    for j in range(i+1,b):
+        if a[i]>=a[j]:
+            a[i],a[j]=a[j],a[i]
+i=0
+while i<b/2:
+    li.append(a[i])
+    i=i+1
+j=b-1
+while j>=b/2:
+    li.append(a[j])
+    j=j-1
+print(li)
+
+output:-
+-------
+
+99 764 675 6757 6545 35 5 7 
+[5, 7, 35, 99, 6757, 6545, 764, 675]
+
+
+

@@ -1,0 +1,67 @@
+factorial:-
+-----------
+
+def factorial(x):
+    if x==1:
+        return 1
+    else:
+        return (x*factorial(x-1))
+print(factorial(5))
+
+output:-
+---------
+
+120
+
+check date and time:-
+---------------------
+
+import datetime as dt
+cd=dt.date.today()
+print(cd)
+new=dt.date(2020,2,4)
+print(new)
+print("year:",new.year)
+print("month",new.month)
+print("day",new.day)
+
+output:-
+---------
+
+2024-01-07
+2020-02-04
+year: 2020
+month 2
+day 4
+
+import datetime as dt
+cd=dt.datetime.now()
+print(cd)
+new=dt.datetime(2020,2,4,2,12,55,5555)
+print(new)
+print(new.date())
+print(new.time())
+
+output:-
+-------
+
+2024-01-07 09:53:21.760462
+2020-02-04 02:12:55.005555
+2020-02-04
+02:12:55.005555
+
+another program:-
+-----------------
+
+import datetime as dt
+cd=dt.datetime.now()
+print(cd)
+new=dt.datetime(2025,1,1)
+difference=new - cd
+print(difference)
+
+output:-
+--------
+
+2024-01-07 09:58:33.816428
+359 days, 14:01:26.183572

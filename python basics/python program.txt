@@ -1,0 +1,202 @@
+1)to print circular or non circular in the given list:
+----------------------------------------------------
+
+program :
+---------
+
+n=list(map(int,input().split()))
+n1=list(map(int,input().split()))
+a=n1[0]
+for x in n:
+    if x==a:
+        s=n.index(x)
+a=n[s:]+n[:s]
+if n1==a:
+    print("circular")
+else:
+    print("not a circular")
+
+output:-
+-------
+
+1 2 3 4 5
+5 1 2 3 4
+circular
+
+2)check the values are same in both the lists:
+
+program:
+--------
+
+n=list(map(int,input().split()))
+n1=list(map(int,input().split()))
+count=0
+for x in n:
+    if x in n1:
+        count+=1
+if count==len(n):
+    print("yes")
+else:
+    print("no")
+
+output:-
+--------
+1 2 3 4 5
+5 1 2 3 4
+yes
+
+3)Given a String, perform split on vowels
+
+Sample Input:
+
+GFGaBst
+
+Sample Output:
+
+GFG Bst
+
+program:-
+--------
+
+a="suhail"
+for x in a:
+    if x=='a' or x=='e' or x=='i' or x=='o' or x=='u':
+        a=a.replace(x," ")
+print(a)
+
+output:-
+-------
+s h  l
+
+4)to create a list of integers in the list.
+
+program:-
+--------
+
+li=[]
+n=int(input())
+m=int(input())
+for i in range(n):  
+    li.append([])
+    for j in range(m):
+        li[i].append(int(input()))
+print(li)
+
+output:-
+--------
+
+3
+1
+2
+3
+4
+[[2], [3], [4]]
+
+5)to find the consecutive term:
+
+program:-
+---------
+
+li=[1,2,3,4,5,5,5,5]
+for i in range(1,len(li)-1):
+    if li[i]==li[i+1] and li[i]==li[i-1]:
+        print(li[i],end=" ")
+
+output:-
+--------
+5 5 
+
+6)to check even index have even number and odd index have odd number
+
+program:-
+--------
+
+n=[2,1,1,4,3]
+temp="True"
+for i in range(len(n)):
+    if i%2!=n[i]%2:
+        temp="false"
+        break
+print(temp)
+
+        
+output:
+-------
+
+false
+
+7)A plumber wants to check whether a pipe junction where N incoming pipes and M outgoing pipes are balanced, and, if not, needs to balance the junction by adding an input pipe oran output pipe of a suitable capacity.
+
+ 
+
+At the junction, there are a set of input pipes and a set of output pipes. Each pipe has a rated capacity and an actual capacity The actual capacity for each pipe is lower than the rated capacity by a constant R, the 'rust factor, which depends on the material of the pipe, and is the same for all the pipes at the junction. For example, if the rated capacity is 65 and is 2 the actual capacity is 63
+
+ 
+
+A junction is balanced if the sum of the actual capacities of the input pipes is the same as the sum of the actual capacities of the output pipes if it is not balanced, the plumber add one input pipe or one output pipe to balance the junction, and determine the rated capacity of that added pipe A
+
+ 
+
+Here we have N incoming pipes and M outgoing pipes. The incoming pipes may be of different rated capacities Similarly, the outgoing pipes may also be of different rated 
+
+capacities
+
+ 
+
+Find the rated capacity of the pipe required to make the junction balanced if the combined actual capacity of the incoming pipes is more than the combined actual capacity of the outgoing pipes then the plumber will need to add an outgoing pipe Conversely, if the combined actual capacity of the incoming pipes is less than the combined actual capacity of the outgoing pipes then the plumber will need to add an incoming pipe
+
+program:-
+--------
+
+a=list(map(int,input().split()))
+a1=list(map(int,input().split()))
+a2=list(map(int,input().split()))
+r=a[len(a)-1]
+if sum(a1)==sum(a2):
+    print("Balanced")
+else:
+    if sum(a1)>sum(a2):
+        s=sum(a1)-sum(a2)
+        print(-(s+r))
+    elif sum(a1)<sum(a2):
+        s=sum(a2)-sum(a1)
+        print(s+r)
+
+output:-
+--------
+
+3 3 2           3 3 2
+85 75 95        85 75 95
+70 80 45        70 80 45
+-62             Balanced
+
+8)Given a string S of length N, find the pattern of the strings as shown below in the examples.
+
+Sample Input:
+
+Geeks
+
+Sample Output:
+
+Geeks Geek Gee Ge G
+
+program:-
+-------
+
+a=input()
+li=[a]
+for i in range(1,len(a)):
+    li.append(a[:len(a)-i])
+print(" ".join(li))
+
+output:-
+---------
+
+description
+description descriptio descripti descript descrip descri descr desc des de d
+
+             
+        
+
+
+
